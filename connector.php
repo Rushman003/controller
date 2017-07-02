@@ -13,8 +13,8 @@ if ((!$socket= socket_create(AF_INET,SOCK_STREAM,SOL_TCP))){
 	}
 	echo "I'm the Socket creator \n <br>";
 //Creating a socket connections
-if (!socket_connect($socket, '192.168.43.16', 80)){
-	$errorcode = socket_last_error();
+if (!socket_connect($socket, '172.162.25.80', 10000)){
+	$errrcode = socket_last_error();
 	$errormsg = socket_strerror ($errorcode);
 	
 	die ("Could not estabish port connection: [$errorcode] $errormsg \n");
